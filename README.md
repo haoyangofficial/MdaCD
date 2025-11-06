@@ -1,5 +1,7 @@
 # Multimodal Difference Augmentation Learning for Remote Sensing Change Detection
 
+Hao Yang, Zhiyu Jiang, Dandan Ma and Qi Wang
+
 ## Implement Guide
 
 ### Data Preparation
@@ -19,7 +21,7 @@ Dataset/SYSUCD/...
 
 2. Run [`tools/write_path.py`](./tools/write_path.py) to generate three text files: `Dataset/LEVIRCD/train.txt`, `Dataset/LEVIRCD/val.txt`, and `Dataset/LEVIRCD/test.txt`. And modify the script to generate another three for the SYSU-CD dataset.
 
-3. Download [official CLIP files for both datasets]() or generate your own CLIP files, then import them and reorganize them into this structure:
+3. Download MdaCD official CLIP files for both datasets from [Hugging Face](https://huggingface.co/YarnYang/MdaCD), or generate your own CLIP files, then import them and reorganize them into this structure:
 
 ```
 Dataset/clip_files/LEVIRCD/train/*.json
@@ -32,7 +34,58 @@ You can also use custom datasets. Just follow the steps above. For unclear detai
 
 ### Environment Setup
 
+This work uses the same environment setup as [ChangeCLIP](https://github.com/dyzy41/ChangeCLIP). Again, for unclear details, you can refer to its environment setup guide.
+
+1. Requirements
+
+```
+Ubuntu 20.04 (Focal)
+CUDA 12.8
+An NVIDIA GPU with at least 16GB RAM
+```
+
+2. Create an environment with Python 3.8, then install these necessary packages:
+
+```
+torch==2.0.0
+torchvision==0.15.1
+numpy==1.24.3
+```
+
+The rest can be installed during the training process.
+
+3. Install CLIP to generate CLIP files. Run:
+
+```
+pip install ftfy regex tqdm
+pip install git+https://github.com/openai/CLIP.git
+```
+
+Please note that other commands that install CLIP are also OK.
+
 ### Training & Testing Commands
+
+1. (Optional) Generate CLIP files. Run:
+
+```
+cd Masking
+python masking_LEVIRCD.py
+python masking_SYSUCD.py
+```
+
+Note that this script may write temporary files in `./Masking` folder.
+
+2. To train MdaCD, run:
+
+```
+bash tr.sh
+```
+
+3. To test MdaCD, run:
+
+```
+bash te.sh
+```
 
 ## License
 
