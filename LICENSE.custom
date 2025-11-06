@@ -1,0 +1,30 @@
+Hippocratic License 3.0 – NonCommercial (Customized)
+Based on the Hippocratic License 3.0 – NonCommercial
+https://firstdonoharm.dev/version/3/0/license.html
+
+Copyright (c) [Year] [Your Name]
+All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to use, copy, modify, merge, publish, distribute, and/or sublicense copies of the Software, subject to the following conditions:
+
+1. NonCommercial Use Only.
+   The Software and derivative works may not be used, in whole or in part, for commercial advantage, monetary compensation, or in any manner primarily intended for commercial benefit.
+
+2. No Surveillance or Military Use.
+   The Software and derivative works may not be used for:
+   - surveillance, tracking, or profiling of individuals or groups,
+   - development or deployment of military, warfare, or intelligence systems,
+   - or any activity that violates internationally recognized human rights.
+
+3. Attribution.
+   Appropriate credit must be given to the original author(s) and source of the Software.
+
+4. ShareAlike (Copyleft).
+   Any modified version or derivative of the Software must be distributed under the same terms as this license, and must include this license text in full.
+
+5. Inclusion of Upstream License.
+   This project is derived from MMSegmentation, which is licensed under the Apache License 2.0.
+   Any redistribution or derivative work must include a copy of the Apache License 2.0 alongside this license.
+
+6. Disclaimer of Warranty.
+   THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
