@@ -1,6 +1,6 @@
 import os
 
-dataset_path = "/home/haoyang/data/data/MdaCD/Dataset/SYSUCD"
+dataset_path = "/home/haoyang/data/data/MdaCD/Dataset/LEVIRCD"
 output_path = dataset_path
 
 if not os.path.exists(output_path):
