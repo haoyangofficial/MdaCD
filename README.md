@@ -1,6 +1,6 @@
 # Multimodal Difference Augmentation Learning for Remote Sensing Change Detection
 
-Hao Yang, Zhiyu Jiang, Dandan Ma and Qi Wang
+Hao Yang, Zhiyu Jiang, Dandan Ma and Qi Wang from Northwestern Polytechnical University
 
 ## Implement Guide
 
@@ -21,7 +21,7 @@ Dataset/SYSUCD/...
 
 2. Run [`tools/write_path.py`](./tools/write_path.py) to generate three text files: `Dataset/LEVIRCD/train.txt`, `Dataset/LEVIRCD/val.txt`, and `Dataset/LEVIRCD/test.txt`. And modify the script to generate another three for the SYSU-CD dataset.
 
-3. Download MdaCD official CLIP files for both datasets from [Hugging Face](https://huggingface.co/YarnYang/MdaCD), or generate your own CLIP files, then import them and reorganize them into this structure:
+3. Download MdaCD official CLIP files for both datasets from [Hugging Face](https://huggingface.co/YarnYang/MdaCD), or generate your own CLIP files later, then import them and reorganize them into this structure:
 
 ```
 Dataset/clip_files/LEVIRCD/train/*.json
@@ -36,7 +36,7 @@ You can also use custom datasets. Just follow the steps above. For unclear detai
 
 This work uses the same environment setup as [ChangeCLIP](https://github.com/dyzy41/ChangeCLIP). Again, for unclear details, you can refer to its environment setup guide.
 
-1. Requirements
+1. Requirement
 
 ```
 Ubuntu 20.04 (Focal)
@@ -112,6 +112,7 @@ This work is built on OpenMMLab's [MMSegmentation](https://github.com/open-mmlab
 @article{Yang2025,
 title = {Multimodal Difference Augmentation Learning for Remote Sensing Change Detection},
 journal = {IEE Transactions on Geoscience and Remote Sensing},
-author = {Hao Yang and Zhiyu Jiang and Dandan Ma and Qi Wang}
+author = {Hao Yang and Zhiyu Jiang and Dandan Ma and Qi Wang},
+year = {2025}
 }
 ```
