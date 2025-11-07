@@ -73,7 +73,14 @@ python masking_LEVIRCD.py
 python masking_SYSUCD.py
 ```
 
-Note that this script may write temporary files in `./Masking` folder.
+These scripts generate masked images. Note that this script may write temporary files in `./Masking` folder.
+
+Then use the generated masked images to generate CLIP files:
+
+```
+cd tools
+bash clip.sh
+```
 
 2. To train MdaCD, run:
 
