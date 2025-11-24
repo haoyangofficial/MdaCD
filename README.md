@@ -2,6 +2,8 @@
 
 Hao Yang, Zhiyu Jiang, Dandan Ma and Qi Wang from Northwestern Polytechnical University
 
+[IEEE Xplore Paper link](https://ieeexplore.ieee.org/document/11236418)
+
 ## Implement Guide
 
 ### Data Preparation
