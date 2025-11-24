@@ -117,9 +117,11 @@ This work is built on OpenMMLab's [MMSegmentation](https://github.com/open-mmlab
 
 ```
 @article{Yang2025,
-title = {Multimodal Difference Augmentation Learning for Remote Sensing Change Detection},
-journal = {IEE Transactions on Geoscience and Remote Sensing},
 author = {Hao Yang and Zhiyu Jiang and Dandan Ma and Qi Wang},
-year = {2025}
+year = {2025},
+volume = {63},
+pages = {1-11},
+title = {Multimodal Difference Augmentation Learning for Remote Sensing Change Detection},
+journal = {IEEE Transactions on Geoscience and Remote Sensing}
 }
 ```
