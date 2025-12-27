@@ -23,7 +23,7 @@ Dataset/SYSUCD/...
 
 2. Run [`tools/write_path.py`](./tools/write_path.py) to generate three text files: `Dataset/LEVIRCD/train.txt`, `Dataset/LEVIRCD/val.txt`, and `Dataset/LEVIRCD/test.txt`. And modify the script to generate another three for the SYSU-CD dataset.
 
-3. Download MdaCD official CLIP files for both datasets from [Hugging Face](https://huggingface.co/YarnYang/MdaCD), or generate your own CLIP files later, then import them and reorganize them into this structure:
+3. Download MdaCD official CLIP confidence files for both datasets from [Hugging Face](https://huggingface.co/YarnYang/MdaCD), or generate your own CLIP files later, then import them and reorganize them into this structure:
 
 ```
 Dataset/clip_files/LEVIRCD/train/*.json
@@ -31,6 +31,8 @@ Dataset/clip_files/LEVIRCD/val/*.json
 Dataset/clip_files/LEVIRCD/test/*.json
 Dataset/clip_files/SYSUCD/...
 ```
+
+Please note that you must and only need to put the CLIP confidence files into this "Dataset/clip_files" folder. The training and testing script will deal with them automatically. You can refer to [`tools/copy_clip_files.py`](./tools/copy_clip_files.py) for more details.
 
 You can also use custom datasets. Just follow the steps above. For unclear details, you can refer to [ChangeCLIP](https://github.com/dyzy41/ChangeCLIP)'s data preparation guide.
 
@@ -43,7 +45,7 @@ This work uses the same environment setup as [ChangeCLIP](https://github.com/dyz
 ```
 Ubuntu 20.04 (Focal)
 CUDA 12.8
-An NVIDIA GPU with at least 16GB RAM
+An NVIDIA GPU with at least 16GB VRAM
 ```
 
 2. Create an environment with Python 3.8, then install these necessary packages:
@@ -77,12 +79,14 @@ python masking_SYSUCD.py
 
 These scripts generate masked images. Note that this script may write temporary files in `./Masking` folder.
 
-Then use the generated masked images to generate CLIP files:
+Then use the generated masked images to generate CLIP confidence files:
 
 ```
 cd tools
 bash clip.sh
 ```
+
+After generating, organize them as described in 3. in "Data Preparation."
 
 2. To train MdaCD, run:
 
@@ -98,13 +102,12 @@ bash te.sh
 
 ## License
 
-This repository is based on [MMSegmentation](https://github.com/open-mmlab/mmsegmentation), 
-which is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+This repository is based on [MMSegmentation](https://github.com/open-mmlab/mmsegmentation), which is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
-All **original modifications, additions, and new code** contributed by Hao Yang 
-are licensed under the **Hippocratic License 3.0 – NonCommercial (Customized)**.
+All **original modifications, additions, and new code** contributed by Hao Yang are licensed under the **Hippocratic License 3.0 – NonCommercial (Customized)**.
 
 ### Summary of License Terms
+
 - The original MMSegmentation components remain under **Apache License 2.0**.
 - The new contributions by Hao Yang are under a **NonCommercial, No-Surveillance, No-Military** license.
 - Any redistribution or derivative work must retain both licenses and comply with their respective terms.
@@ -113,7 +116,7 @@ Full text of the custom license is available in the file [`LICENSE.custom`](./LI
 
 ## Acknowledgement
 
-This work is built on OpenMMLab's [MMSegmentation](https://github.com/open-mmlab/mmsegmentation) and S. Dong _et al._'s [ChangeCLIP](https://github.com/dyzy41/ChangeCLIP). Thanks for their great work!
+This work is built on OpenMMLab's [MMSegmentation](https://github.com/open-mmlab/mmsegmentation) and S. Dong _et al._'s [ChangeCLIP](https://github.com/dyzy41/ChangeCLIP). Thanks for their great works!
 
 ## Citation
 
